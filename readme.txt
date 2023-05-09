@@ -3,10 +3,12 @@ https://github.com/jahidanowar/nuxt3-wp-blog
 
 Steps to create project:
 1- Install latest version of nuxt.js
-2- app.vue :
+2- Copy .gitignore Copy .run Copy git-reset.php
+3- run this commands in terminal: git init & git add .
+4- app.vue :
         <template>
           <div>
             Hello nuxt !
           </div>
         </template>
-3- npm i -D @nuxtjs/tailwindcss ( -D: --save-dev )
+5- npm i -D @nuxtjs/tailwindcss ( -D: --save-dev )
