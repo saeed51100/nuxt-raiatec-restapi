@@ -1,13 +1,15 @@
-<script lang="ts" setup>
-</script>
-
+<script lang="ts" setup></script>
 <template>
   <main>
-    <PageHeader >
+    <PageHeader>
       <!--        Image -->
-      <div class="w-[200px] relative h-[200px] mr-5 rounded overflow-hidden shadow-md">
-        <img src="~assets/img/42565948.jpg"
-             class="w-full h-full absolute object-cover">
+      <div
+          class="w-[200px] relative h-[200px] mr-5 rounded overflow-hidden shadow-md"
+      >
+        <img
+            src="~assets/img/42565948.jpg"
+            class="w-full h-full absolute object-cover"
+        >
       </div>
       <!--      Header text-->
       <div>
@@ -20,6 +22,22 @@
         </a>
       </div>
     </PageHeader>
+    <!--    Blog Grid Starts   -->
+    <section class="container py-16">
+      <div class="grid sm:grid-cols-3 gap-5">
+        <BlogCard v-for="i in 9"
+                  :key="i"
+                  title="Reference site about Lorem Ipsum, gits or"
+                  excerpt="Reference site about
+                  Lorem Ipsum, giving information on its origins,
+                  as well as a random Lipsum generator."
+                  image=""
+                  slug="blog-1"
+        />
+
+
+      </div>
+    </section>
+    <!--    Blog Grid Ends     -->
   </main>
-  <h1>Index File</h1>
 </template>
