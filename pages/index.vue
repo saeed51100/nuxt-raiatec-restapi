@@ -1,4 +1,9 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { data:posts } = await useFetch<any>(
+    "http://localhost/test.raiatec.com/wp-json/wp/v2/posts?_embed"
+);
+
+</script>
 <template>
   <main>
     <PageHeader>
@@ -26,14 +31,12 @@
     <section class="container py-16">
       <div class="grid sm:grid-cols-3 gap-5">
         <BlogCard
-            v-for="i in 9"
-            :key="i"
-            title="Reference site about Lorem Ipsum, gits or"
-            excerpt="Reference site about
-                  Lorem Ipsum, giving information on its origins,
-                  as well as a random Lipsum generator."
+            v-for="post in posts"
+            :key="post.id"
+            :title="post.title.rendered"
+            :excerpt="post.excerpt.rendered"
             image="http://localhost/test.raiatec.com/wp-content/uploads/2022/08/raiatec-lamp.jpg"
-            slug="blog-1"
+            :slug="post.slug"
         />
       </div>
     </section>
