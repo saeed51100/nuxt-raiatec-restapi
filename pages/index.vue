@@ -25,17 +25,16 @@
     <!--    Blog Grid Starts   -->
     <section class="container py-16">
       <div class="grid sm:grid-cols-3 gap-5">
-        <BlogCard v-for="i in 9"
-                  :key="i"
-                  title="Reference site about Lorem Ipsum, gits or"
-                  excerpt="Reference site about
+        <BlogCard
+            v-for="i in 9"
+            :key="i"
+            title="Reference site about Lorem Ipsum, gits or"
+            excerpt="Reference site about
                   Lorem Ipsum, giving information on its origins,
                   as well as a random Lipsum generator."
-                  image="http://localhost/test.raiatec.com/wp-content/uploads/2022/08/raiatec-lamp.jpg"
-                  slug="blog-1"
+            image="http://localhost/test.raiatec.com/wp-content/uploads/2022/08/raiatec-lamp.jpg"
+            slug="blog-1"
         />
-
-
       </div>
     </section>
     <!--    Blog Grid Ends     -->
