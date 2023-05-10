@@ -31,7 +31,7 @@
                   excerpt="Reference site about
                   Lorem Ipsum, giving information on its origins,
                   as well as a random Lipsum generator."
-                  image=""
+                  image="http://localhost/test.raiatec.com/wp-content/uploads/2022/08/raiatec-lamp.jpg"
                   slug="blog-1"
         />
 
