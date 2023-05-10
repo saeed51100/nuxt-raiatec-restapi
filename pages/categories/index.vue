@@ -3,6 +3,5 @@
 </script>
 
 <template>
-  <PageHeader />
-  <h1>category index</h1>
+  <PageHeader title="Category Index"/>
 </template>
