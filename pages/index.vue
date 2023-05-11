@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-const { data:posts } = await useFetch<any>(
-    "http://localhost/test.raiatec.com/wp-json/wp/v2/posts?_embed"
-);
-
+const {data: posts} = await useWpApi().getPosts<any>();
 </script>
 <template>
   <main>
@@ -35,9 +32,10 @@ const { data:posts } = await useFetch<any>(
             :key="post.id"
             :title="post.title.rendered"
             :excerpt="post.excerpt.rendered"
-            image="http://localhost/test.raiatec.com/wp-content/uploads/2022/08/raiatec-lamp.jpg"
+
             :slug="post.slug"
         />
+        :image="post._embedded['wp:featuremedia'][0]?.source_url"
       </div>
     </section>
     <!--    Blog Grid Ends     -->
