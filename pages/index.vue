@@ -32,7 +32,7 @@ const {data: posts} = await useWpApi().getPosts<any>();
             :key="post.id"
             :title="post.title.rendered"
             :excerpt="post.excerpt.rendered"
-
+            image="http://localhost/test.raiatec.com/wp-content/uploads/2022/10/html-2.jpg"
             :slug="post.slug"
         />
         :image="post._embedded['wp:featuremedia'][0]?.source_url"
