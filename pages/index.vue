@@ -31,7 +31,7 @@ const {data: posts} = await useWpApi().getPosts<any>();
             :key="post.id"
             :title="post.title.rendered"
             :excerpt="post.excerpt.rendered"
-            :image="post._embedded['wp:featuredmedia'][0]?.source_url"
+            :image="post && post._embedded && post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : ' '"
             :slug="post.slug"
         />
       </div>
