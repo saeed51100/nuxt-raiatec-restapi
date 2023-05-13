@@ -15,9 +15,8 @@ const {data: posts} = await useWpApi().getPosts<any>();
       </div>
       <!--      Header text-->
       <div>
-        <h1 class="text-4xl font-bold mb-2">Elon Musk</h1>
-        <p class="mb-3">I built SpaceX, acquired Tesla, Twitter.<br/>
-          In my free time i sh*t post on twitter.
+        <h1 class="text-4xl font-bold mb-2">Saeed Javadzadeh</h1>
+        <p class="mb-3">Full stack developer.
         </p>
         <a class="btn bg-sky-500 text-sky-50 py-2 px-4 rounded inline-block hover:bg-sky-600 duration-200"
            href="https://github.com/saeed51100">My Github
@@ -32,10 +31,9 @@ const {data: posts} = await useWpApi().getPosts<any>();
             :key="post.id"
             :title="post.title.rendered"
             :excerpt="post.excerpt.rendered"
-            image="http://localhost/test.raiatec.com/wp-content/uploads/2022/10/html-2.jpg"
+            :image="post._embedded['wp:featuredmedia'][0]?.source_url"
             :slug="post.slug"
         />
-        :image="post._embedded['wp:featuremedia'][0]?.source_url"
       </div>
     </section>
     <!--    Blog Grid Ends     -->

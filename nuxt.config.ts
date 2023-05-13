@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     app:{
       head:{
           charset: "utf16",
-          title: "Elon Musk",
+          title: "raiatec.com",
           viewport: "width=device-width, initial-scale=1",
       }
     },
