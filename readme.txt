@@ -7,7 +7,7 @@ Steps to create project:
 3- run this commands in terminal: git init & git add .
 4- copy files from github
 
-I have a one issue and one pull request to:
+I create one issue and one pull request on github:
 
 https://github.com/jahidanowar/nuxt3-wp-blog/issues/5
 https://github.com/jahidanowar/nuxt3-wp-blog/pull/6
