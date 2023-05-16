@@ -39,6 +39,7 @@
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/categories">Categories</NuxtLink></li>
         <li><NuxtLink to="/about">About Me</NuxtLink></li>
+        <img src="~assets/img/raiatec.svg" alt="Raiatec Logo" />
       </ul>
     </div>
   </nav>
