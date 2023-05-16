@@ -22,22 +22,19 @@ defineProps<{
              class="absolute object-cover w-full h-full group-hover:scale-110 duration-300"
         />
       </div>
-
-
       <div class="card-body">
         <div class="rt_title_lines">
           {{ title }}
         </div>
 
         <div class="rt_excerpt_lines" style="color: #6e6f75; font-size: 14px">
-        <p
-            v-if="excerpt"
-            class="grid__content-excerpt mb-2 text-sm text-clip overflow-hidden ..."
-        >
-          {{ excerpt }}
-        </p>
+          <p
+              v-if="excerpt"
+              class="grid__content-excerpt mb-2 text-sm text-clip overflow-hidden ..."
+          >
+            {{ excerpt }}
+          </p>
         </div>
-
 
 
         <NuxtLink
@@ -49,7 +46,6 @@ defineProps<{
 
         </NuxtLink>
       </div>
-
 
     </div>
   </div>
