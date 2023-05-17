@@ -43,7 +43,7 @@
   </header>
 </template>
 
-<style>
+<style lang="scss">
 .nav-scroller {
 .nav {
   display: flex;
