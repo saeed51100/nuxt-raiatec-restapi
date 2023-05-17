@@ -25,7 +25,7 @@ const {data: posts} = await useWpApi().getPosts<any>();
 
 </template>
 
-<style>
+<style lang="scss">
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -61,10 +61,10 @@ const {data: posts} = await useWpApi().getPosts<any>();
 .shadow-sm {
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%) !important;
 
-&
-:hover {
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%) !important;
-}
+  &
+  :hover {
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%) !important;
+  }
 
 }
 
@@ -79,24 +79,21 @@ svg {
 
 a {
 
-&
-:hover {
+  &
+  :hover {
 
-> img {
-  opacity: 100%;
-}
+    > img {
+      opacity: 100%;
+    }
 
-> svg {
-  opacity: 100%;
-}
+    > svg {
+      opacity: 100%;
+    }
 
-}
-color: #151414
+  }
 
-;
-text-decoration: none
-
-;
+  color: #151414;
+  text-decoration: none;
 }
 
 </style>
