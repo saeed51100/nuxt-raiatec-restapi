@@ -8,13 +8,13 @@
       <ul class="nav justify-content-center">
 
 
-        <li>
+        <li :class="{'list-groop': $route.path === '/'}">
           <NuxtLink to="/">Home</NuxtLink>
         </li>
-        <li>
+        <li :class="{'list-groop': $route.path === '/categories'}">
           <NuxtLink to="/categories">Categories</NuxtLink>
         </li>
-        <li>
+        <li :class="{'list-groop': $route.path === '/about'}">
           <NuxtLink to="/about">About Me</NuxtLink>
         </li>
 
@@ -45,50 +45,56 @@
 
 <style lang="scss">
 .nav-scroller {
+  .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  > li {
+    margin-right: 10px;
+    margin-top: 5px;
+    list-style-type: none;
+
+    > a {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      direction: rtl;
+      color: #585858;
+      padding: .43em;
+      border-radius: 4px;
+      font-size: medium;
+      font-weight: 500 !important;
+
+      &:hover {
+        background-color: #ffeda0;
+      }
+
+      &:focus {
+        background-color: #e6e6e6;
+      }
+    }
+  }
+
+  > li.active {
+    > a {
+      outline: 1px solid #b2b2b2;
+      border-radius: 4px;
+      background-color: #ffeda0;
+    }
+  }
 }
-}
-.nav {
->li {
-  margin-right: 10px;
-  margin-top: 5px;
-  list-style-type: none;
->a {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  direction: rtl;
-  color: #585858;
-  padding: .43em;
-  border-radius: 4px;
-  font-size: medium;
-  font-weight: 500 !important;
-&:hover {
-   background-color: #ffeda0;
- }
-&:focus {
-   background-color: #e6e6e6;
- }
-}
-}
->li.active {
->a {
-  outline: 1px solid #b2b2b2;
-  border-radius: 4px;
-  background-color: #ffeda0;
-}
-}
-}
+
 .list-groop {
   pointer-events: none;
   outline: 1px solid #8ed5ba;
@@ -96,11 +102,13 @@
   border-radius: 4px;
   background-color: #d2f4ea;
 }
+
 .admin-bar {
-.sticky-top {
-  top: 32px;
+  .sticky-top {
+    top: 32px;
+  }
 }
-}
+
 a {
   color: #151414;
   text-decoration: none;
