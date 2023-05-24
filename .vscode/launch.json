@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch PHP Script",
+            "name": "git reset --hard HEAD",
             "type": "node",
             "request": "launch",
             "program": "E:/ubuntu/nuxt-raiatec-restapi/git-reset.php",
