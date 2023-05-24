@@ -8,7 +8,6 @@
             "name": "npm run dev -- -o",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}",
             "args": ["run", "dev","--", "-o"],
             "console": "integratedTerminal",
             "program": "C:\\Users\\saeed\\.nvm\\versions\\node\\v18.16.0\\bin\\node_modules\\npm",
