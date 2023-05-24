@@ -5,14 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Run npm run dev",
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/node_modules/.bin/npm",
+            "args": ["run", "dev"],
+            "console": "integratedTerminal",
+            "protocol": "inspector",
+            "windows": {
+              "program": "C:\\Users\\saeed\\.nvm\\versions\\node\\v18.16.0\\bin\\node_modules\\npm"
+            },
             "runtimeExecutable": "C:\\Users\\saeed\\.nvm\\versions\\node\\v18.16.0\\bin\\node.exe"
-        }
+          }
     ]
 }
