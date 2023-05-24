@@ -5,13 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch PHP Script",
+            "type": "node",
+            "request": "launch",
+            "program": "E:/ubuntu/nuxt-raiatec-restapi/git-reset.php",
+            "runtimeExecutable": "C:/xampp/php/php.exe"
+        },
+        {
             "name": "npm run dev -- -o",
             "type": "node",
             "request": "launch",
             "args": ["run", "dev","--", "-o"],
             "console": "integratedTerminal",
-            "program": "C:\\Users\\saeed\\.nvm\\versions\\node\\v18.16.0\\bin\\node_modules\\npm",
-            "runtimeExecutable": "C:\\Users\\saeed\\.nvm\\versions\\node\\v18.16.0\\bin\\node.exe"
+            "program": "C:/Users/saeed/.nvm/versions/node/v18.16.0/bin/node_modules/npm",
+            "runtimeExecutable": "C:/Users/saeed/.nvm/versions/node/v18.16.0/bin/node.exe"
         }
     ]
 }
