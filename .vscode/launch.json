@@ -8,7 +8,8 @@
             "name": "git reset --hard HEAD",
             "type": "node",
             "request": "launch",
-            "program": "E:/ubuntu/nuxt-raiatec-restapi/git-reset.php",
+            "console": "integratedTerminal",
+            "program": "E://ubuntu//nuxt-raiatec-restapi//git-reset.php",
             "runtimeExecutable": "C:/xampp/php/php.exe"
         },
         {
