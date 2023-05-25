@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const {data: posts} = await useWpApi().getPosts<any>();
+const {data: posts} = await useWpApi().getPosts();
 </script>
 <template>
 
