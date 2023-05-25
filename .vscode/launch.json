@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "console": "integratedTerminal",
-            "program": "E://ubuntu//nuxt-raiatec-restapi//git-reset.php",
+            "program": "${workspaceFolder}/git-reset.php",
             "runtimeExecutable": "C:/xampp/php/php.exe"
         },
         {
