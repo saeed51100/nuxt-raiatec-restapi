@@ -1,5 +1,16 @@
 <script lang="ts" setup>
-const {data: posts} = await useWpApi().getPosts();
+useHead({
+  title: "Home",
+  meta: [
+    {
+      name: "description",
+      content: "Home",
+    },
+  ],
+  titleTemplate: "raiatec.com - %s",
+});
+const {data: posts, refresh, error} = await useWpApi().getPosts();
+
 </script>
 <template>
 
@@ -14,7 +25,7 @@ const {data: posts} = await useWpApi().getPosts();
             :key="post.id"
             :title="post.title.rendered"
             :excerpt="post.excerpt.rendered"
-            :image="post && post._embedded && post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : ' '"
+            :image="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : ' '"
             :slug="post.slug"
         />
 
